@@ -3,7 +3,7 @@
 
   function filterForks(repos) {
     return repos.filter(function (repo) {
-      return !repo.fork;
+      return !(repo.fork || repo.html_url.indexOf('nearsoft.github.io') >= 0);
     });
   }
 
